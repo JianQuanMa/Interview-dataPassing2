@@ -9,12 +9,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var testview: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        //added something   
+        //added something
     }
 
-
+    @IBAction func tappedButton(_ sender: UIButton) {
+    }
+    
 }
 
