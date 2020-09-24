@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var testview: UITextView!
+    @IBOutlet weak var textView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -17,7 +17,14 @@ class ViewController: UIViewController {
     }
 
     @IBAction func tappedButton(_ sender: UIButton) {
+        performSegue(withIdentifier: "segue", sender: self)
     }
     
 }
 
+
+extension ViewController: DetailViewControllerDelegate{
+    func showText(_ text: String) {
+        textView.text = text
+    }
+}

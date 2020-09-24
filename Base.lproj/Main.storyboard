@@ -33,7 +33,7 @@
                                     <constraint firstAttribute="height" constant="50" id="ZdH-rP-BIo"/>
                                     <constraint firstAttribute="width" constant="80" id="cIm-38-NTc"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="forward"/>
                                 <connections>
                                     <action selector="tappedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6U9-Mr-4Hv"/>
                                 </connections>
@@ -50,7 +50,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="testview" destination="rI8-Lf-gs3" id="0cU-mI-alZ"/>
+                        <outlet property="textView" destination="rI8-Lf-gs3" id="0cU-mI-alZ"/>
                         <segue destination="lFx-IE-xSz" kind="show" identifier="segue" id="bnG-cl-byW"/>
                     </connections>
                 </viewController>
@@ -98,7 +98,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="gdQ-E6-UyI"/>
                     <connections>
-                        <outlet property="testField" destination="xX3-H2-mF3" id="3sy-UO-gGH"/>
+                        <outlet property="textField" destination="xX3-H2-mF3" id="3sy-UO-gGH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bhs-VH-BZa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

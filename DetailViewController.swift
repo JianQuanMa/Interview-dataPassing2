@@ -7,9 +7,15 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+protocol DetailViewControllerDelegate{
+    func showText(_ text: String)
+}
 
-    @IBOutlet weak var testField: UITextField!
+class DetailViewController: UIViewController {
+    
+    var showTextdelegate: DetailViewControllerDelegate!
+    @IBOutlet weak var textField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,6 +23,10 @@ class DetailViewController: UIViewController {
     }
     
     @IBAction func tappedSubmitButton(_ sender: UIButton) {
+        if let textString = textField.text {
+            showTextdelegate.showText(textString)
+        }
+      dismiss(animated: true, completion: nil)
     }
 
 }
