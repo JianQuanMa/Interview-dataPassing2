@@ -7,23 +7,28 @@
 
 import UIKit
 
-protocol DetailViewControllerDelegate{
+protocol DetailViewControllerDelegate: AnyObject{
     func showText(_ text: String)
 }
 
 class DetailViewController: UIViewController {
     
-    var showTextdelegate: DetailViewControllerDelegate!
+    weak var showTextdelegate: DetailViewControllerDelegate!
     @IBOutlet weak var textField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+   //     let detailViewController = UIViewController.self as! DetailViewController
+        
+      
 
         // Do any additional setup after loading the view.
     }
     
     @IBAction func tappedSubmitButton(_ sender: UIButton) {
         if let textString = textField.text {
+            print(textString)
+            print(showTextdelegate)
             showTextdelegate.showText(textString)
         }
       dismiss(animated: true, completion: nil)

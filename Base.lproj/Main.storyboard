@@ -61,7 +61,7 @@
         <!--Detail View Controller-->
         <scene sceneID="zZW-Pp-PBN">
             <objects>
-                <viewController id="lFx-IE-xSz" customClass="DetailViewController" customModule="Interview_dataPassing2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" id="lFx-IE-xSz" customClass="DetailViewController" customModule="Interview_dataPassing2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vj3-ZC-ZE5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

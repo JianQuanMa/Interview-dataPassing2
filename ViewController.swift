@@ -12,12 +12,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var textView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        //added something
+        
     }
 
     @IBAction func tappedButton(_ sender: UIButton) {
+        let detailViewController = storyboard?.instantiateViewController(identifier: "DetailViewController") as! DetailViewController
+        detailViewController.showTextdelegate = self
         performSegue(withIdentifier: "segue", sender: self)
+        
     }
     
 }
